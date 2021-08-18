@@ -5,28 +5,28 @@ class atm(object):
         self.pinNumber = pinNumber
         
     
-    def CashWithdrawl(bankMoney,pinNumber):
+    def CashWithdrawl(self,pinNumber):
         inputtedNumber = int(input("Put in your pin number: "))
         if (inputtedNumber == pinNumber):
             withdraw = int(input("How much money will you like to withdraw: "))
-            bankMoney = bankMoney - withdraw
-            print("You have ", bankMoney," left")
+            self.bankMoney = self.bankMoney - withdraw
+            print("You have ", self.bankMoney," left")
         else:
             print("non-matching pin number")    
 
-    def CashInput(bankMoney,pinNumber):
+    def CashInput(self,pinNumber):
         inputtedNumber = int(input("Put in your pin number: "))
         if (inputtedNumber == pinNumber):
             inputure = int(input("How much money will you like to input: "))
-            bankMoney = bankMoney + inputure
-            print("You have ", bankMoney," left")
+            self.bankMoney = self.bankMoney + inputure
+            print("You have ", self.bankMoney," left")
         else:
             print("non-matching pin number") 
     
-    def BalanceEnquiry(bankMoney,cardNumber):
+    def BalanceEnquiry(self,cardNumber):
         inputtedCardNumber = int(input("Put in your card number: "))
         if (inputtedCardNumber == cardNumber):
-            print("You have ",bankMoney," left in your bank")
+            print("You have ",self.bankMoney," left in your bank")
         else:
             print("Non-matching card number")
 
